@@ -1,0 +1,43 @@
+<mat-toolbar style="background-color: aqua;">
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (mouseenter)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" >
+        <!-- bootstrap vertical nav bar is here -->
+
+        <ul class="nav flex-column">
+            <li class="nav-item navbutton">
+                <a class="nav-link" aria-current="page" href="employee">Employees</a>
+            </li>
+            <li class="nav-item navbutton">
+                <a class="nav-link" href="add-employee">Add-Employees</a>
+            </li>
+            <li class="nav-item navbutton">
+                <a class="nav-link" href="#">NewEmployee SignUp</a>
+            </li>
+            <li class="nav-item navbutton">
+                <a class="nav-link" href="#">Employee Login</a>
+            </li>
+
+        </ul>
+    </mat-drawer>
+
+    
+    <router-outlet></router-outlet>
+
+</mat-drawer-container>
